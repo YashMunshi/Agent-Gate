@@ -1,0 +1,91 @@
+{
+  "cases": [
+    {
+      "name": "Own-department ticket read",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "reason": "All access checks passed"
+    },
+    {
+      "name": "Cross-department ticket denied",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Ticket is outside the agent\u2019s department"
+    },
+    {
+      "name": "Finance tool outside support scope",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Tool is outside this agent\u2019s allowed scopes"
+    },
+    {
+      "name": "Unexpected arguments rejected",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Tool arguments do not match the permitted schema"
+    },
+    {
+      "name": "External destination rejected",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Exports are restricted to the internal report store"
+    },
+    {
+      "name": "Ticket mutation requires approval",
+      "expected": "approval_required",
+      "actual": "approval_required",
+      "passed": true,
+      "reason": "An administrator must approve this exact action"
+    },
+    {
+      "name": "Changed arguments invalidate approval",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Approval is bound to different arguments, identity, or requester"
+    },
+    {
+      "name": "Approved exact action executes",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "reason": "Exact action approved and permissions revalidated"
+    },
+    {
+      "name": "Consumed approval cannot replay",
+      "expected": "deny",
+      "actual": "deny",
+      "passed": true,
+      "reason": "Approval is missing, expired, or already consumed"
+    },
+    {
+      "name": "Finance aggregate allowed",
+      "expected": "allow",
+      "actual": "allow",
+      "passed": true,
+      "reason": "All access checks passed"
+    },
+    {
+      "name": "Revoked credential rejected",
+      "expected": "invalid_credential",
+      "actual": "invalid_credential",
+      "passed": true,
+      "reason": "Agent credential is invalid, expired, or revoked."
+    },
+    {
+      "name": "Expired credential rejected",
+      "expected": "invalid_credential",
+      "actual": "invalid_credential",
+      "passed": true,
+      "reason": "Agent credential is invalid, expired, or revoked."
+    }
+  ],
+  "total": 12,
+  "passed": 12,
+  "scope": "deterministic local gateway controls; not LLM prompt-injection detection accuracy"
+}

@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.secret
+public/
+.vercel/
+.env*
