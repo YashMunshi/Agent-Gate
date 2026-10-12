@@ -6,6 +6,13 @@
   <meta name="theme-color" content="#202a25">
   <title>Agent Gate · Agent Access Console</title>
   <meta name="description" content="Scoped agent identities, exact-action approvals, and local mock enterprise tools.">
+  <meta property="og:title" content="Agent Gate · Accountable agent access">
+  <meta property="og:description" content="Run a scoped request. Inspect its decision. Approve the exact action.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
   <link rel="preload" href="fonts/plex-regular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/plex-semibold.woff" as="font" type="font/woff" crossorigin>
@@ -13,7 +20,9 @@
   <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to workspace</a>
   <div id="app"></div>
+  <noscript><main class="not-found"><h1>Agent Gate needs JavaScript.</h1><p>Enable JavaScript to explore the interactive access console, or download the Python backend from GitHub.</p></main></noscript>
   <div id="toast" class="hidden" role="status" aria-live="polite"></div>
 </body>
 </html>

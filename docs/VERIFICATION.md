@@ -32,3 +32,10 @@ The Vercel static build has eight passing Node tests covering all 12 isolated
 control scenarios, account switching, approvals, expiry, redaction, revocation,
 visitor isolation, reset, and rendering each tab. This verifies a browser
 simulation, not server-enforced security. No live LLM is used.
+
+## Instrument-panel design revision — October 12, 2026 UTC
+
+All 26 backend tests and 8 hosted tests passed. Token contrast pairs measure
+5.27:1 or higher for body/muted/status text. A real HTTP check verified the PNG
+share asset and the designed HTML 404 response. Browser rendering and exact
+390/768/1280px viewport verification remain pending dashboard access.

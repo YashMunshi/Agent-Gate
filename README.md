@@ -9,6 +9,11 @@ jade, and pale green palette, 3-pixel corners, hairline borders, and visible hov
 and keyboard-focus states distinguish it from the Policy Lens analysis workspace.
 Font license notices are included in `web/fonts/`.
 
+The instrument-panel revision adds a trace-driven decision circuit, a token system
+for color/type/space/motion, a 4-column mobile grid and 12-column desktop grid,
+mobile evidence rows, keyboard skip navigation, explicit loading and error states,
+a custom Open Graph image, and a designed 404. See [design notes](docs/DESIGN.md).
+
 ## Public demo and Python backend
 
 The Vercel deployment is an **interactive browser simulation**. It preserves the

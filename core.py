@@ -181,15 +181,18 @@ def serve(application, directory, port):
                 self.validate_origin()
                 name = self.path.split('?')[0]
                 name = 'index.html' if name == '/' else name.lstrip('/')
-                if name not in ('index.html','app.js','style.css','favicon.svg',
+                if name not in ('index.html','app.js','style.css','favicon.svg','404.html','og.png',
                                 'fonts/plex-regular.woff','fonts/plex-medium.woff','fonts/plex-semibold.woff'):
-                    raise Problem(404,'Not found.')
+                    name = '404.html'
+                    status = 404
+                else:
+                    status = 200
                 file = root/name
                 data = file.read_bytes()
-                self.send_response(200)
+                self.send_response(status)
                 self.headers_common()
-                content_type = {'html':'text/html','js':'text/javascript','css':'text/css','svg':'image/svg+xml','woff':'font/woff'}[file.suffix[1:]]
-                self.send_header('Content-Type',content_type if file.suffix == '.woff' else content_type+'; charset=utf-8')
+                content_type = {'html':'text/html','js':'text/javascript','css':'text/css','svg':'image/svg+xml','woff':'font/woff','png':'image/png'}[file.suffix[1:]]
+                self.send_header('Content-Type',content_type if file.suffix in ('.woff','.png') else content_type+'; charset=utf-8')
                 self.send_header('Content-Length',str(len(data)))
                 self.end_headers()
                 self.wfile.write(data)
