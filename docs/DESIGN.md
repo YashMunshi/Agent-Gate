@@ -33,3 +33,13 @@ accessibility 4/5, polish 4/5. These are design judgments, not user research or
 performance measurements. Browser verification is reported separately; LCP and
 CLS targets have not been measured. Manual acceptance checks: 390px, 768px,
 1280px; keyboard-only flow; invalid arguments; approval consumption; 404/share.
+
+## Public entrance revision — October 14, 2026
+
+The security-field-manual entrance replaces the public demo password form,
+adds three independently evaluated request specimens, an architecture rail,
+scenario-led exploration, evidence links, and direct demo-role entry. The console
+gets a demo-perspective selector for completing the approval flow.
+Code-level self-review: hierarchy 4/5, distinctiveness 4/5, readability 4/5,
+accessibility 4/5, polish 4/5. These are design judgments; browser/viewport and
+performance measurements are reported separately and are not implied by them.

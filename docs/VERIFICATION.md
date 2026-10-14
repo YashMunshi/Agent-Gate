@@ -39,3 +39,12 @@ All 26 backend tests and 8 hosted tests passed. Token contrast pairs measure
 5.27:1 or higher for body/muted/status text. A real HTTP check verified the PNG
 share asset and the designed HTML 404 response. Browser rendering and exact
 390/768/1280px viewport verification remain pending dashboard access.
+
+## Public entrance revision — October 14, 2026
+
+The local build passed all 26 backend tests and 12 Node tests (the eight core
+public-demo tests plus four entrance tests). The three preview choices execute
+actual demo checks and leave existing visitor workspace state unchanged. Public
+startup opens the project entrance, while the local backend retains its login.
+The cloud-browser inspection timed out; no new visual viewport or LCP/CLS
+measurements are claimed for this revision.

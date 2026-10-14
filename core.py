@@ -181,7 +181,7 @@ def serve(application, directory, port):
                 self.validate_origin()
                 name = self.path.split('?')[0]
                 name = 'index.html' if name == '/' else name.lstrip('/')
-                if name not in ('index.html','app.js','style.css','favicon.svg','404.html','og.png',
+                if name not in ('index.html','app.js','style.css','favicon.svg','404.html','og.png','landing.js','landing.css',
                                 'fonts/plex-regular.woff','fonts/plex-medium.woff','fonts/plex-semibold.woff'):
                     name = '404.html'
                     status = 404

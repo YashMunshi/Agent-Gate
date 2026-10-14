@@ -1,5 +1,7 @@
 # Agent Gate
 
+[Open the public lab](https://agent-gate-tau.vercel.app/) · [View source](https://github.com/YashMunshi/Agent-Gate)
+
 Scoped agent identities, exact-action approvals, and secure mock tool execution.
 
 The interface is an agent access console with horizontal navigation, a numbered
@@ -14,6 +16,18 @@ for color/type/space/motion, a 4-column mobile grid and 12-column desktop grid,
 mobile evidence rows, keyboard skip navigation, explicit loading and error states,
 a custom Open Graph image, and a designed 404. See [design notes](docs/DESIGN.md).
 
+## Public entrance
+
+The public page explains the project before opening the lab. Its interactive
+request preview compares permitted access, a department-boundary denial, and an
+approval-required update using the actual browser-demo checks on isolated state.
+The full lab includes a demo-perspective selector for Alice, Bob, and Admin,
+so reviewers can follow an approval without returning to a login form.
+
+The public design was informed by six reference projects and sites. See
+[research notes](docs/REFERENCE-REVIEW.md) for sources and the changes they informed.
+No external product branding, benchmark results, or integration claims are used.
+
 ## Public demo and Python backend
 
 The Vercel deployment is an **interactive browser simulation**. It preserves the
@@ -24,8 +38,8 @@ workspace. Visitors do not share credentials, approvals, or records.
 
 Browser checks are illustrative: visitors can modify or clear their own local
 state. The public demo is not server-enforced authentication, a production
-security boundary, or a live LLM integration. Its advertised demo password is
-only a way to enter the simulated accounts.
+security boundary, or a live LLM integration. The public entrance opens the lab directly and offers an explicit demo-role
+selector; it does not ask visitors to type a password.
 
 The included **Python/SQLite backend** implements the real server-side session,
 CSRF, authorization, credential digest, transactional approval consumption, and
@@ -128,10 +142,11 @@ or paid database are required for this static demo.
 
 ```bash
 python3 build.py
-node --test tests/hosted.test.cjs
+node --test tests/hosted.test.cjs tests/landing.test.cjs
 ```
 
-Eight Node tests cover the 12 browser control scenarios, the account-switching
+Twelve Node tests cover the public entrance, isolated preview decisions, role
+launches, local-login preservation, the 12 browser control scenarios, account-switching
 approval flow, expiry, owner scope, redaction, changed arguments, rejection,
 revocation, visitor isolation, persistence, reset, and hosted component rendering.
 The browser simulation and Python enforcement tests are reported separately.

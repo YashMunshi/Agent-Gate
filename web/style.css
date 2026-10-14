@@ -15,7 +15,7 @@
 }
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--surface);color:var(--text);font:var(--type-base)/1.6 var(--font-text);-webkit-font-smoothing:antialiased}::selection{background:var(--accent-light);color:var(--surface-dark)}
 button,input,select,textarea{font:inherit}button,a,input,select,textarea{outline-offset:4px}button,a{touch-action:manipulation}
-:where(button,a,input,select,textarea):focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+:where(button,a,input,select,textarea,summary):focus-visible{outline:2px solid var(--focus);outline-offset:4px}
 button,.button-link{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-3);min-height:44px;min-width:44px;padding:var(--space-2) var(--space-4);border:1px solid var(--border-strong);border-radius:var(--radius);background:var(--surface-raised);color:var(--text);font-weight:500;cursor:pointer;text-decoration:none;transition:background var(--duration-fast) var(--ease-enter),border-color var(--duration-fast) var(--ease-enter),color var(--duration-fast) var(--ease-enter),transform var(--duration-fast) var(--ease-enter)}
 button:hover,.button-link:hover{background:var(--surface-inset);border-color:var(--accent);color:var(--accent-hover)}button:active,.button-link:active{transform:translateY(1px);transition-timing-function:var(--ease-exit)}button:disabled{background:var(--surface-inset);color:var(--text-muted);border-color:var(--border);cursor:not-allowed;transform:none;opacity:.72}button[aria-busy=true]{cursor:wait}
 .primary{background:var(--accent);color:var(--accent-contrast);border-color:var(--accent)}.primary:hover{background:var(--accent-hover);color:var(--accent-contrast);border-color:var(--accent-hover)}
