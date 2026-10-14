@@ -1,6 +1,6 @@
 # Agent Gate design system
 
-Direction: instrument-panel security console. Structural Plex headings, technical
+Direction: instrument-panel security console. Structural Space Grotesk headings and Manrope body text, technical
 monospace labels, pale field surfaces, charcoal navigation, and one jade accent.
 
 Audience: recruiters and security engineers evaluating scoped agent access.
@@ -9,10 +9,10 @@ Primary action: issue a credential and run a request, then inspect its decision.
 ## System
 
 CSS custom properties define role-based colors, a 1.25 modular type scale, body
-text at 16–18px / 1.6, a 4px-based fixed spacing scale, 3px corners, and 160ms
+text at 18px / 1.6, a 4px-based fixed spacing scale, 3px corners, and 160ms
 interaction / 360ms entrance motion. Reduced-motion disables animation.
 The mobile grid has four columns; desktop has twelve. Dense evidence tables
-reflow to labeled rows below 768px.
+reflow to labeled rows below 1000px.
 
 The signature decision circuit projects real decision-trace entries into six
 named checks. It does not infer missing checks or manufacture evaluation scores.
@@ -43,3 +43,14 @@ gets a demo-perspective selector for completing the approval flow.
 Code-level self-review: hierarchy 4/5, distinctiveness 4/5, readability 4/5,
 accessibility 4/5, polish 4/5. These are design judgments; browser/viewport and
 performance measurements are reported separately and are not implied by them.
+
+## Typography revision — October 14, 2026
+
+Self-hosted variable Space Grotesk adds character to headings; Manrope provides
+a readable text face across the homepage and every console tab. Body text is
+18px, supporting text and controls are 16px, and technical labels are 15px.
+The heading scale uses a 1.25 ratio. Fonts include their SIL Open Font Licenses.
+Specimen choices stack, navigation wraps, and tables become labeled rows below
+1000px to accommodate larger text rather than compressing it.
+Code-level review: hierarchy 4/5, distinctiveness 4/5, readability 4/5,
+accessibility 4/5, polish 4/5. Browser visual checks remain separate.

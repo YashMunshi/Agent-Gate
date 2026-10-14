@@ -182,7 +182,8 @@ def serve(application, directory, port):
                 name = self.path.split('?')[0]
                 name = 'index.html' if name == '/' else name.lstrip('/')
                 if name not in ('index.html','app.js','style.css','favicon.svg','404.html','og.png','landing.js','landing.css',
-                                'fonts/plex-regular.woff','fonts/plex-medium.woff','fonts/plex-semibold.woff'):
+                                'fonts/plex-regular.woff','fonts/plex-medium.woff','fonts/plex-semibold.woff',
+                                'fonts/manrope-latin-variable.woff','fonts/space-grotesk-latin-variable.woff'):
                     name = '404.html'
                     status = 404
                 else:
